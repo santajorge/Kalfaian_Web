@@ -1,0 +1,511 @@
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Thasadith', sans-serif;
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h4, h5 {
+    font-family: 'Averia Serif Libre', serif;
+    font-weight: bold;
+}
+
+/* Parrafos */
+
+p {
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #F8A39E !important;
+}
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 1em;
+}
+.nav-link:hover {
+    text-decoration: none;
+    color: #26374D !important;
+}
+
+.logo {
+    width: 4em;
+}
+
+/* Header */
+header {
+    background-color: #26374D;
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+header h1 span {
+    color: #64CCA0;
+}
+header .btn-primary {
+    background-color: #64CCA0;
+    border: none;
+}
+header .btn-primary:hover {
+    background-color: #52B088;
+}
+
+.cta {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.hero-img {
+    border-radius: 50%;
+}
+
+/* Sobre mí */
+
+#sobre-mi {
+    position: relative;
+    background-color: #f3ebcb;
+    color: #26374D;
+    padding: 60px 0;
+    overflow: hidden; /* Oculta cualquier exceso */
+}
+
+/* Primer círculo (más grande) */
+#sobre-mi::before {
+    content: "";
+    position: absolute;
+    bottom: -180px; /* Se ajusta según el tamaño del círculo */
+    right: -180px;
+    width: 450px; /* Tamaño del círculo externo */
+    height: 450px;
+    border: 10px solid #f49454; /* Borde del círculo */
+    border-radius: 50%; /* Convierte el div en un círculo */
+    background-color: transparent; /* Fondo transparente */
+    z-index: 0;
+}
+
+/* Segundo círculo (más pequeño, concéntrico) */
+#sobre-mi::after {
+    content: "";
+    position: absolute;
+    bottom: -130px; /* Se ajusta para que quede concéntrico */
+    right: -130px;
+    width: 350px; /* Tamaño del círculo interno */
+    height: 350px;
+    border: 8px solid #64CCA0; /* Borde del círculo */
+    border-radius: 50%; /* Convierte el div en un círculo */
+    background-color: transparent; /* Fondo transparente */
+    z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima */
+#sobre-mi .container {
+    position: relative;
+    z-index: 1;
+}
+
+#sobre-mi img {
+    border-radius: 10px;
+}
+
+.img-about {
+    width: 90%;
+}
+
+.about-icon {
+    color: #64CCA0; /* Color del ícono */
+    font-size: 1.2rem; /* Tamaño del ícono */
+    vertical-align: middle; /* Alineación con el texto */
+}
+
+.timeline {
+    border-left: 4px solid #64CCA0;
+    margin-left: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.timeline-item h5 {
+    margin-bottom: 5px;
+    color: #26374D;
+    font-weight: bold;
+}
+.timeline-item p {
+    color: #6C757D;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+.timeline-item:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #64CCA0;
+    border-radius: 50%;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+}
+
+/* Mis Consultas */
+#consultas {
+    background-color: #26374D;
+    color: #FFFFFF;
+    padding: 60px 0;
+}
+#consultas .card {
+    background-color: #F3EBCB;
+    color: #26374D;
+    border: none;
+}
+#consultas .card-title {
+    font-weight: bold;
+}
+
+.img-card {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* Animaciones al hacer scroll */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover para las tarjetas */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.card:hover .card-title {
+    color: #64CCA0;
+}
+
+/* Contacto */
+#contacto {
+    position: relative; /* Para uso de pseudoelementos */
+    background-color: #F3EBCB;
+    color: #26374D;
+    padding: 60px 0;
+    overflow: hidden; /* Evita que los círculos sobresalgan visualmente */
+}
+
+.fa-instagram {
+    color: #e4405f; /* Color personalizado */
+  }
+
+.fa-linkedin {
+    color: #0077b5;
+}
+
+a:hover .fa-linkedin {
+    color: #005582; 
+  }
+
+  a:hover .fa-instagram {
+    color: #c13584; 
+  }
+
+
+/* Primer círculo (más grande) */
+#contacto::before {
+    content: "";
+    position: absolute;
+    bottom: -180px; /* Se ajusta según el diseño */
+    left: -180px; 
+    width: 450px; /* Tamaño del círculo externo */
+    height: 450px;
+    border: 10px solid #64CCA0; /* Color del borde */
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 0;
+}
+
+/* Segundo círculo (más pequeño, concéntrico) */
+#contacto::after {
+    content: "";
+    position: absolute;
+    bottom: -130px; /* Se ajusta según el diseño */
+    left: -130px; 
+    width: 350px; /* Tamaño del círculo interno */
+    height: 350px;
+    border: 8px solid #f49454; /* Color del borde */
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima de los círculos */
+#contacto .container {
+    position: relative;
+    z-index: 1;
+}
+
+#contacto .btn-primary {
+    background-color: #64CCA0;
+    border: none;
+}
+#contacto .btn-primary:hover {
+    background-color: #52B088;
+}
+#contacto img {
+    border-radius: 10px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #26374D;
+    text-align: center; 
+    font-size: 16px; 
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+/* Estilo para el logo */
+.footer-logo {
+    max-width: 150px; 
+    margin-bottom: 10px; 
+}
+
+/* Estilo para los enlaces */
+.footer-links a {
+    color: #FFFFFF; /* Color azul para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado entre los enlaces */
+}
+
+/* Cambiar color de enlaces al pasar el mouse */
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #F8A39E; /* Azul más oscuro */
+}
+
+/* Espaciado superior para el texto de copyright */
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* Contenedor para la imagen */
+.image-container {
+    position: relative; /* Necesario para el overlay */
+}
+
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 100%;
+    border-radius: 10px; /* Mantiene el borde redondeado */
+    display: block; /* Elimina espacios blancos inesperados */
+}
+
+/* Overlay sobre la imagen */
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #26374D; 
+    opacity: 10%;
+    border-radius: 10px; 
+    z-index: 1; /* Coloca el Overlay sobre la imagen */
+}
+
+.image-container img {
+    position: relative;
+    z-index: 0; /* Coloca la imagen debajo del overlay */
+}
+
+/* Clases de animación (para scroll) */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animaciones para los elementos */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Desde arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Desde la izquierda */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica la animación al título principal */
+#inicio h1 {
+    animation: slideDown 1s ease-out; /* Duración de 1s */
+}
+
+/* Aplica la animación al subtítulo */
+.lead {
+    animation: slideDown 1.2s ease-out; /* Un poco más tarde */
+}
+
+/* Aplica la animación al botón CTA */
+#inicio .cta {
+    animation: slideDown 1.4s ease-out; /* Más tarde */
+}
+
+/* Aplica la animación a la imagen */
+#inicio img {
+    animation: slideLeft 1.5s ease-out; /* Desde la izquierda */
+}
+
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+    #inicio {
+        padding: 20px 15px; /* Reducimos el padding para mejor ajuste en móviles */
+        text-align: center; /* Centra todo el contenido en móviles */
+    }
+
+    #inicio h1 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título */
+        margin-top: 15px;
+        margin-bottom: 15px; /* Espacio debajo del título */
+    }
+
+    #inicio p {
+        font-size: 1rem; /* Reduce el tamaño del texto descriptivo */
+        margin-bottom: 20px; /* Aumenta el espacio entre texto y botón */
+    }
+
+    .cta {
+        font-size: 1.1rem; /* Ajusta el tamaño del texto del botón */
+        padding: 10px 20px; /* Mejora el espacio dentro del botón */
+        margin-bottom: 20px; /* Espacio debajo del botón */
+    }
+
+    #inicio img {
+        width: 90%; /* Imagen más pequeña y proporcional */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block;
+    }
+
+    #sobre-mi h2 {
+        margin-top: 20px; /* Ajusta el valor según sea necesario */
+    }
+
+    /* Oculta los círculos en la sección 'sobre-mi' */
+    #sobre-mi::before,
+    #sobre-mi::after {
+        display: none;
+    }
+    
+    /* Oculta los círculos en la sección 'contacto' */
+    #contacto::before,
+    #contacto::after {
+        display: none;
+    }
+
+    .redes {
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* Para dispositivos móviles y tablets (máx. 1024px) */
+@media (max-width: 1024px) {
+    /* Ajustes para la sección del inicio */
+    #inicio h1 {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #inicio p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    #inicio img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    #inicio .container {
+        padding: 0 1rem;
+    }
+
+    .lead {
+        text-align: center;
+    }
+
+    .cta {
+        font-size: 1.3rem; /* Ajusta el tamaño del texto del botón */
+        padding: 10px 20px; /* Mejora el espacio dentro del botón */
+        margin-bottom: 25px; /* Espacio debajo del botón */
+    }
+
+    /* Ajustes para la sección Sobre Mí */
+    #sobre-mi h2 {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+    }
+
+    #sobre-mi p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    /* Oculta los círculos en la sección 'sobre-mi' */
+    #sobre-mi::before,
+    #sobre-mi::after {
+        display: none;
+    }
+    
+    /* Oculta los círculos en la sección 'contacto' */
+    #contacto::before,
+    #contacto::after {
+        display: none;
+    }
+
+    .redes {
+        margin-bottom: 1.5rem;
+    }
+}
