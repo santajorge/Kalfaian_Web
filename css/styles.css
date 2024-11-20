@@ -1,5 +1,21 @@
 /* Tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: 'Recoleta';
+    src: local('Recoleta Black'), local('Recoleta-Black'),
+        url('../fuentes/Recoleta-Black.woff2') format('woff2'),
+        url('../fuentes/Recoleta-Black.woff') format('woff'),
+        url('../fuentes/Recoleta-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Recoleta';
+    src: local('Recoleta Light'), local('Recoleta-Light'),
+        url('../fuentes/Recoleta-Light.woff2') format('woff2'),
+        url('../fuentes/Recoleta-Light.woff') format('woff'),
+        url('../fuentes/Recoleta-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 
 /* Estilos generales */
 body {
@@ -9,8 +25,8 @@ body {
 
 /* Títulos */
 h1, h2, h4, h5 {
-    font-family: 'Averia Serif Libre', serif;
-    font-weight: bold;
+    font-family: 'Recoleta';
+    font-weight: 900;
 }
 
 /* Parrafos */
