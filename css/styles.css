@@ -32,6 +32,34 @@ a {
     color: inherit;
 }
 
+/* Separador -Frase 1- */
+
+#cita-destacada-1 {
+    padding: 60px 15px;
+    background-color: #f49454;
+    color: #fff;
+    text-align: center;
+}
+.frase-destacada-1 {
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Separador -Frase 2- */
+
+#cita-destacada-2 {
+    padding: 60px 15px;
+    background-color: #64CCA0;
+    color: #fff;
+    text-align: center;
+}
+.frase-destacada-2 {
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
 /* Navbar */
 .navbar {
     background-color: #F8A39E !important;
